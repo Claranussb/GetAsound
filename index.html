@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/getAsound.css">
+
+
+
+    <title>GetAsound</title>
+  </head>
+  <body>
+    <div class="container-fluid entete">
+      <div class="container">
+        <h1 class="titre">Parlez nous de votre cible</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h6 class="sous-titre">Cible</h6>
+
+        <div class="vignette" data-toggle="collapse" data-target="#b2b" type="button" aria-expanded="false" aria-controls="b2b" id="vignette-b2b">
+          <h5 class="titre-vignette">B2B</h5>
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/factory.png" alt="Icone usine">
+        </div>
+
+        <div class="vignette" data-toggle="collapse" data-target="#b2c" type="button" aria-expanded="false" aria-controls="b2c" id="vignette-b2c">
+          <h5 class="titre-vignette">B2C</h5>
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/factory.png" alt="Icone usine">
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="section collapse" id="b2b">
+        <h6 class="sous-titre">B2B</h6>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Entreprise</h5>
+        <div class="clearfix"></div>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Association</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Public</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Autres</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="section">
+        <h6 class="sous-titre">Plus d'informations</h6>
+        <p class="compteur"></p>
+        <form>
+          <div class="form-group">
+            <textarea class="form-control" id="FormTextarea" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+        </div>
+
+      <div class="clearfix"></div>
+
+      <div class="section collapse" id="b2c">
+        <h6 class="sous-titre">B2C</h6>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Homme</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Femme</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+
+        <div class="boy">
+        <h5 class="titre-vignette">Autres</h5>
+        <div class="sous-vignette">
+          <img class="card-img-top" src="https://assistant.getasound.com/assets/boy.png" alt="Icone homme">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="section">
+        <h6 class="sous-titre">Plus d'informations</h6>
+        <p class="compteur"></p>
+              <form>
+                <div class="form-group">
+                  <textarea class="form-control" id="FormcontrolTextarea" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script >// On cache l'ancienne section au moment d'afficher la nouvelle
+    $('#b2b').on('show.bs.collapse', function () {
+      $('#b2c').collapse('hide');
+      $('#vignette-b2b').addClass('selected');
+    });
+    $('#b2b').on('hide.bs.collapse', function () {
+      $('#vignette-b2b').removeClass('selected');
+    });
+    $('#b2c').on('show.bs.collapse', function () {
+      $('#b2b').collapse('hide');
+      $('#vignette-b2c').addClass('selected');
+    });
+    $('#b2c').on('hide.bs.collapse', function () {
+      $('#vignette-b2c').removeClass('selected');
+    });
+
+$('.sous-vignette').click(function() { $('.sous-vignette').removeClass('selected'); $(this).addClass('selected'); });
+
+    // Compteur de mots
+    compterMots();
+    $('#FormTextarea').on('keyup propertychange paste', function() { compterMots(); });
+
+    compter();
+    $('#FormcontrolTextarea').on('keyup propertychange paste', function() { compter(); });
+
+    function compterMots() {
+      var textarea = $('#FormTextarea').val();
+      var words = 123 - (textarea.length == 0 ? 0 : textarea.trim().split(/\s+\b/).length);
+      $('.compteur').html(words + ' mots');
+      if (words < 0) {
+        $('.compteur').addClass('rouge');
+      }
+      else {
+        $('.compteur').removeClass('rouge');
+      }
+    }
+
+    function compter() {
+      var textarea2 = $('#FormcontrolTextarea').val();
+      var words2 = 123 - (textarea.length == 0 ? 0 : textarea.trim().split(/\s+\b/).length);
+      $('.compteur').html(words2 + ' mots');
+      if (words2 < 0) {
+        $('.compteur').addClass('rouge');
+      }
+      else {
+        $('.compteur').removeClass('rouge');
+      }
+    }
+  </script>
+  </body>
+</html>
